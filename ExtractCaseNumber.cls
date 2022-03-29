@@ -11,6 +11,7 @@ global class ExtractCaseNumber {
             Matcher match = pat.matcher(text);
             CaseNumberResult result = new CaseNumberResult();   
             while(match.find()) {
+		// Only care about the first result, so let's return that
                 result.caseId = match.group(1);
                 break; 
             }
